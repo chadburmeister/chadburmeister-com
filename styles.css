@@ -1,0 +1,118 @@
+/* Chad Burmeister — personal brand site */
+:root{
+  --navy:#0b1f3a; --ink:#13233c; --body:#3d4a5f; --muted:#6b7688;
+  --bg:#fdfcfa; --card:#ffffff; --line:#e6e2da;
+  --accent:#1d6ff2; --accent-dark:#0e4fc0; --gold:#c9963c;
+  --radius:14px; --shadow:0 10px 30px rgba(11,31,58,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--body);line-height:1.65;font-size:17px}
+h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;color:var(--ink);line-height:1.15;font-weight:600}
+a{color:var(--accent);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(253,252,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--navy);letter-spacing:.2px}
+.nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.nav-links a{color:var(--ink);font-size:.95rem;font-weight:500}
+.nav-links a.active{color:var(--accent)}
+.nav-links a.btn{color:#fff}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.95rem;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+
+/* Hero */
+.hero{padding:80px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700;color:var(--gold);margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:20px}
+.hero .lede{font-size:1.16rem;margin-bottom:30px;max-width:34em}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-photo{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/4.4;object-fit:cover;width:100%}
+
+/* Cred strip */
+.cred{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.cred-inner{max-width:1080px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cred-item{font-size:.92rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px}
+.cred-item span{color:var(--gold)}
+
+/* Sections */
+section{padding:72px 0}
+.section-eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:700;color:var(--accent);margin-bottom:10px}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px}
+.section-intro{max-width:44em;margin-bottom:40px}
+
+/* Logo chips */
+.logos{display:flex;flex-wrap:wrap;gap:12px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-weight:600;font-size:.92rem;color:var(--ink)}
+
+/* Cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.card h3{font-size:1.15rem;margin-bottom:10px}
+.card .num{font-family:'Fraunces',Georgia,serif;font-size:2.3rem;font-weight:700;color:var(--accent);display:block;margin-bottom:6px}
+.card p{font-size:.95rem}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:32px;display:flex;flex-direction:column;gap:36px}
+.t-item{position:relative}
+.t-item::before{content:"";position:absolute;left:-41px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.t-item .when{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.t-item h3{font-size:1.25rem;margin:4px 0 2px}
+.t-item .org{font-weight:600;color:var(--accent);font-size:.98rem;margin-bottom:8px}
+.t-item p{max-width:46em}
+
+/* Books */
+.book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.book{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.book img{aspect-ratio:2/2.6;object-fit:cover;width:100%}
+.book-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.book-body h3{font-size:1.08rem}
+.book-body p{font-size:.9rem;flex:1}
+.book-body a{font-weight:600;font-size:.92rem}
+
+/* Quotes */
+.quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+blockquote{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:26px;font-size:1.02rem;color:var(--ink)}
+blockquote footer{margin-top:14px;font-size:.88rem;color:var(--muted);font-style:normal}
+
+/* Bands */
+.band{background:var(--navy);color:#cfd9e8}
+.band h2,.band h3{color:#fff}
+.band .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);box-shadow:none}
+.band .card p{color:#cfd9e8}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--navy),#123058);border-radius:var(--radius);padding:56px 48px;text-align:center;color:#cfd9e8}
+.cta h2{color:#fff;margin-bottom:12px}
+.cta p{max-width:38em;margin:0 auto 26px}
+
+/* Footer */
+footer.site{border-top:1px solid var(--line);padding:44px 0;font-size:.9rem;color:var(--muted)}
+.foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{color:var(--muted)}
+.foot-links a:hover{color:var(--accent)}
+
+@media(max-width:820px){
+  .hero{padding:48px 0 40px}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-photo{max-width:420px}
+  .grid-3,.book-grid{grid-template-columns:1fr 1fr}
+  .grid-2,.quote-grid{grid-template-columns:1fr}
+  .nav-links{gap:16px}
+  section{padding:52px 0}
+}
+@media(max-width:560px){
+  .grid-3,.book-grid{grid-template-columns:1fr}
+  .cred-inner{justify-content:flex-start}
+  .cta{padding:40px 24px}
+}
