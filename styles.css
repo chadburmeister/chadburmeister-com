@@ -73,7 +73,7 @@ h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px}
 /* Books */
 .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .book{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.book img{aspect-ratio:2/2.6;object-fit:cover;width:100%}
+.book img{aspect-ratio:2/2.6;object-fit:contain;width:100%;background:#f4f1ea;padding:16px}
 .book-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .book-body h3{font-size:1.08rem}
 .book-body p{font-size:.9rem;flex:1}
