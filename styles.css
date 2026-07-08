@@ -13,6 +13,13 @@ a{color:var(--accent);text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
+/* Availability banner */
+.avail{background:var(--navy);color:#dbe6f5;font-size:.92rem}
+.avail-inner{max-width:1080px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center}
+.avail .dot{width:9px;height:9px;border-radius:50%;background:#3ddc84;flex-shrink:0;box-shadow:0 0 0 3px rgba(61,220,132,.22)}
+.avail strong{color:#fff;font-weight:600}
+.avail a{color:#8ab8ff;font-weight:600;white-space:nowrap}
+
 /* Nav */
 .nav{position:sticky;top:0;z-index:50;background:rgba(253,252,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
